@@ -1,0 +1,288 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: monospace;
+    color: white;
+}
+
+main {
+    max-width: 1100px;
+    width: 800px;
+    min-width: 600px;
+    background-image: radial-gradient(80% 100% at center 100%, rgba(107, 184, 0, 0.85), #295120);
+    border-radius: 6px;
+    padding: 0 80px 80px;
+}
+
+main > section {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+header {
+    height: 24px;
+    margin-bottom: 80px;
+}
+
+.toggle {
+    display: flex;
+}
+
+.toggle-btn:hover {
+    cursor: pointer;
+}
+
+.toggle> .toggle-btn {
+    padding: 6px 12px;
+    border: 1px solid black;
+}
+
+#manual {
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+#auto {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+main .bet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+}
+
+.bet > .bet-amount-container {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.bet-amount-container>.bet-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+}
+
+.bet-input> input {
+    width: 100px;
+    text-align: center;
+    padding: 5px 10px;
+}
+
+.amount-suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    width: 140px;
+}
+
+.amount-suggestions > .amount-button {
+    width: 60px;
+}
+
+.field-size-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.field-size-container button {
+    max-width: 80px;
+}
+
+#board {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.row {
+    display: flex;
+    gap: 6px;
+}
+
+.cell {
+    border-radius: 6px;
+    background-color: #7a9d63;;
+}
+
+.playing .cell {
+    background-color: white;
+}
+
+.playing .cell:hover {
+    cursor: pointer;
+    box-shadow: 0 0 2px 3px darkgrey;
+}
+
+.small {
+    width: calc((500px - 6px * 3)/4);
+    height: calc((300px - 6px * 2)/3);
+}
+
+.medium {
+    width: calc((500px - 6px * 6)/7);
+    height: calc((300px - 6px * 3)/4);
+}
+
+.large {
+    width: calc((500px - 6px * 9)/10);
+    height: calc((300px - 6px * 4)/5);
+}
+
+.amount-change {
+    position: absolute;
+    text-align: center;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: white;
+    top: 22px;
+    user-select: none;
+}
+
+.amount-change:hover {
+    cursor: pointer;
+}
+
+#plus {
+    right: 8px;
+    color: black;
+}
+
+#minus {
+    left: 8px;
+    color: black;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.overlay {
+    width: 100%;
+    height: 90%;
+    opacity: 0;
+    position: absolute;
+}
+
+.playing .red {
+    background-color: red !important;
+}
+
+.playing .green {
+    background-color: limegreen;
+}
+
+.playing .yellow {
+    background-color: yellow;
+}
+
+.bet-amount {
+    font-size: 12px;
+}
+
+.selected-mode {
+    background-color: #63804d;
+}
+
+.random-btn {
+    display: none;
+}
+
+.show-rand {
+    display: unset;
+}
+
+.chosen {
+    background-color: #63804d;
+    border: none;
+    border-radius: 6px;
+}
+
+#stop-btn {
+    display: none;
+}
+
+button {
+    padding: 5px 10px;
+}
+
+.amount-button {
+    padding: unset;
+    background: transparent;
+    color: white;
+    border-radius: 6px;
+    border: 1px solid white;
+}
+
+.amount-button:hover {
+    background: #63804d;
+}
+
+#stop-btn {
+    width: 100%;
+    background: red;
+    border: none;
+    border-radius: 6px;
+}
+
+#stop-btn:hover, #bet-button:hover, .random-btn:hover {
+    cursor: pointer;
+}
+
+#bet-button {
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(to right, #97d913, #6fc10a, #97d913, #6fc10a);;
+}
+
+.random-btn {
+    width: 100%;
+    background: yellow;
+    border: none;
+    border-radius: 6px;
+}
+
+.bet-amount-container, .field-size-container {
+    background: #244413;
+    width: 100%;
+    opacity: 0.8;
+    border-radius: 6px;
+    padding: 20px 10px;
+}
+
+.bet-amount-container {
+    justify-content: center;
+}
+
+#auto-container {
+    flex-direction: column;
+    gap: 12px;
+    margin-right: 18px;
+}
+
+#money {
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    padding: 20px 10px;
+}

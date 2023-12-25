@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Goal</title>
+    <link rel="stylesheet" href="style/index.css">
+</head>
+<body>
+    <main>
+        <header><div id="money"></div></header>
+        <section class="board-section">
+
+            <div class="bet">
+                <div class="toggle">
+                    <div class="toggle-btn selected-mode" id="manual">Manual</div>
+                    <div class="toggle-btn" id="auto">Auto</div>
+                </div>
+                <div class="bet-amount-container">
+                    <div class="bet-input">
+                        <label for="amount-input">
+                            Bet Amount $
+                        </label>
+                        <input type="number" id="amount-input">
+                        <div id="minus" class="amount-change">-</div>
+                        <div id="plus" class="amount-change">+</div>
+                    </div>
+                    <div class="amount-suggestions">
+                        <button class="amount-button" value="1">1$</button>
+                        <button class="amount-button" value="5">5$</button>
+                        <button class="amount-button" value="10">10$</button>
+                        <button class="amount-button" value="20">20$</button>
+                    </div>
+                </div>
+                <div class="field-size-container">
+                    <div>Field Size</div>
+                    <div class="sizes">
+                        <button class="field-size-btn size" id="small-field-btn">Small</button>
+                        <button class="field-size-btn" id="medium-field-btn">Medium</button>
+                        <button class="field-size-btn" id="large-field-btn">Large</button>
+                    </div>
+                </div>
+                <div id="auto-container">
+                    <div class="field-size-container">
+                        <div>On Win</div>
+                        <div class="bet-on-win">
+                            <button class="auto-bet-btn" value="0">Return To Base</button>
+                            <button class="auto-bet-btn" value="1">Increase 100%</button>
+                            <button class="auto-bet-btn" value="2">Decrease 50%</button>
+                        </div>
+                    </div>
+
+                    <div class="field-size-container">
+                        <div>On Loss</div>
+                        <div class="bet-on-loss">
+                            <button class="auto-bet-btn" value="0">Return To Base</button>
+                            <button class="auto-bet-btn" value="1">Increase 100%</button>
+                            <button class="auto-bet-btn" value="2">Decrease 50%</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="random-btn">SELECT RANDOMLY</button>
+                <button id="bet-button">BET</button>
+                <button id="stop-btn">STOP</button>
+
+            </div>
+            <div id="board">
+
+            </div>
+        </section>
+    </main>
+</body>
+<script src="javascript/index.js"></script>
+</html>
